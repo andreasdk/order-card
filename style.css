@@ -1,47 +1,160 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
+
+
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+
+    --drop-shadow: drop-shadow(0 .4rem .4rem hsl(245, 75%, 52%, .25));
 }
 
-body {
-    margin: 0;
+body {   
     font-family: 'Red Hat Display', sans-serif;
     background: hsl(225, 100%, 94%);
+    min-height: 100vh;
+
+    background-image: url("images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 4vw;
+    
+}
+
+@media (min-width: 769px) {
+    body {
+      background-image: url("images/pattern-background-desktop.svg");
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+p {
+    line-height: 1.6rem;
 }
 
 section {
-    background-image: url(images/pattern-background-desktop.svg);
-    height: 43.7rem;
+    display: flex;
+    align-items: center;
+
 }
 
 .card {
-    width: 45rem;
     margin: 0 auto;
     background: #ffffff;
     border-radius: 1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    filter: var(--drop-shadow);
 }
 
-.card__hero {
-    background-image: url(images/illustration-hero.svg);
-    width: 45rem;
-    height: 22rem;
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
+.card__hero img {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card__body {
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 1.5rem;
 }
 
 .card__header {
     text-align: center;
     font-weight: 900;
-    font-size: 2.8rem;
+    font-size: 2rem;
 }
 
 .card__copy {
     font-size: 1.6rem;
     text-align: center;
+    color: #717FA6;
+}
+
+.card__plan {
+    background-color: hsl(225, 100%, 98%);
+    border-radius: .8em;
+    padding: 1.1em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.card__plan__copy {
+    margin-left: 1.25em;
+    margin-right: auto;
+}
+
+.card__plan__copy h5 {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.card__plan__copy p {
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-top: -1rem;
+}
+
+
+.card__plan a {
+    font-size: 1.4rem;
+    margin-right: .5rem;
+}
+
+.card__plan a:hover {
+    filter: var(--drop-shadow);
+}
+
+.card__submit {
+    text-align: center;
+}
+
+.card__submit button {
+    cursor: pointer;
+    background-color: #382AE1;
+    color: #ffffff;
+    padding: 1.5rem 0 1.5rem 0;
+    width: 100%;
+    border:none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+.card__cancel button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: #1F2E55;
+    padding: 1.5rem 0 1.5rem 0;
+    width: 100%;;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.card__submit button:hover, .card__cancel button:hover {
+    filter: var(--drop-shadow);
+}
+
+.attribution {
+    margin: 1.5em auto 0;
+    width: 80%;
+    font-size: 11px; 
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
 }
