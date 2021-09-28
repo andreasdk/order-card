@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Design preview for the Order summary card coding challenge](./images/screenshot/png)
+![Design preview for the Order summary card coding challenge](./images/screenshot.png)
 
 
 ### Links
