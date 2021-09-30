@@ -27,19 +27,13 @@ body {
     padding: 4vw;
 }
 
-@media (min-width: 769px) {
-    body {
-      background-image: url("images/pattern-background-desktop.svg");
-    }
-}
-
 img {
     max-width: 100%;
     display: block;
 }
 
 p {
-    line-height: 2.6rem;
+    line-height: 2.5rem;
 }
 
 .mb1 {
@@ -60,12 +54,6 @@ main {
     margin-top: 3rem;
 }
 
-@media only screen and (min-width: 500px) {
-    main {
-        margin-top:0
-    }
-}
-
 .card {
     margin: 0 auto;
     background: var(--white-color);
@@ -79,33 +67,27 @@ main {
 }
 
 .card__body {
-    max-width: 30rem;
+    max-width: 26rem;
     margin: 0 auto;
     padding: 1rem;
 }
 
-@media only screen and (min-width: 500px) {
-    .card__body {
-        max-width: 35rem;
-        padding: 0;
-    }
-}
-
 .card__header {
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .card__header h1 {
     text-align: center;
     font-weight: 900;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     color: var(--dark-blue);
 }
 
 .card__copy {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-align: center;
     color: var(--desaturated-blue);
+
 }
 
 .card__plan {
@@ -129,20 +111,19 @@ main {
 
 .card__plan__copy h2 {
     font-weight: 900;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: var(--dark-blue);
 }
 
 .card__plan__copy p {
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-top: -1rem;
     color: var(--grey-color);
 }
 
-
 .card__plan a {
-    font-size: 1.4rem;
+    font-size: 1.3em;
     margin-right: .5rem;
     color: var(--bright-blue);
     font-weight: 700;
@@ -161,7 +142,7 @@ main {
     cursor: pointer;
     background-color: var(--bright-blue);
     color: #ffffff;
-    padding: 1.5rem 0 1.5rem 0;
+    padding: 1.5rem 0;
     width: 100%;
     border:none;
     border-radius: 1rem;
@@ -183,13 +164,13 @@ main {
     overflow: hidden;
     outline: none;
     color: var(--desaturated-blue);
-    padding: 1.5rem 0 1.5rem 0;
+    padding: 1.5rem 0;
     width: 100%;;
     border-radius: 1rem;
     font-size: 1.5rem;
     font-weight: 900;
     margin-top: 2rem;
-
+    margin-bottom: 2rem;
 }
 
 .card__cancel button:hover, .card__cancel button:active {
@@ -211,4 +192,46 @@ main {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (min-width: 641px) {
+    body {
+        background-image: url("images/pattern-background-desktop.svg");
+      }
+    .card__header h1 {
+        font-size: 2.8rem;
+    }
+    main {
+        margin-top:0
+    }
+    .card__header {
+        margin-top: 4rem;
+    }
+    .card__body {
+        max-width: 35rem;
+        padding: 0;
+    }
+    .card__copy {
+        font-size: 1.5rem;
+    }
+    p {
+        line-height: 2.6rem;
+    }
+    .card__body {
+        max-width: 34rem;
+        padding: 0;
+    }
+    .card__plan__copy h2 {
+        font-size: 1.6rem;
+    }
+    .card__plan__copy p {
+        font-size: 1.6rem;
+    }
+    .card__plan a {
+        font-size: 1.4em;
+    }
+    .card__cancel button {
+        margin-bottom: 3rem;
+    }
+    
 }
