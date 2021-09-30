@@ -57,7 +57,13 @@ p {
 main {
     display: flex;
     align-items: center;
+    margin-top: 3rem;
+}
 
+@media only screen and (min-width: 500px) {
+    main {
+        margin-top:0
+    }
 }
 
 .card {
@@ -65,6 +71,7 @@ main {
     background: var(--white-color);
     border-radius: 2rem;
     filter: var(--drop-shadow);
+    min-height: fit-content;
 }
 
 .card__hero img {
@@ -72,8 +79,14 @@ main {
 }
 
 .card__body {
-    max-width: 35rem;
+    max-width: 28rem;
     margin: 0 auto;
+}
+
+@media only screen and (min-width: 500px) {
+    .card__body {
+        max-width: 35rem;
+    }
 }
 
 .card__header {
@@ -96,7 +109,7 @@ main {
 .card__plan {
     background-color: var(--very-pale-blue);
     border-radius: 1.5rem;
-    padding: 1rem 1rem;
+    padding: .85rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,6 +173,10 @@ main {
     transition: background-color .25s ease-in;
 }
 
+
+
+.card__cancel {}
+
 .card__cancel button {
     background-color: transparent;
     background-repeat: no-repeat;
@@ -183,7 +200,7 @@ main {
 
 }
 
-.card__submit button:hover, .card__cancel button:hover {
+.card__cancel button:hover {
     filter: var(--drop-shadow);
 }
 
