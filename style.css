@@ -79,13 +79,15 @@ main {
 }
 
 .card__body {
-    max-width: 28rem;
+    max-width: 30rem;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 @media only screen and (min-width: 500px) {
     .card__body {
         max-width: 35rem;
+        padding: 0;
     }
 }
 
@@ -172,10 +174,6 @@ main {
     background-color: hsl(245, 83%, 68%);
     transition: background-color .25s ease-in;
 }
-
-
-
-.card__cancel {}
 
 .card__cancel button {
     background-color: transparent;
